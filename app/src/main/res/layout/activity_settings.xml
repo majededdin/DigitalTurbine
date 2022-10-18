@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/BaseLayout"
+    android:fillViewport="true"
+    tools:context=".ui.view.activities.SettingsActivity">
+
+    <LinearLayout
+        android:id="@+id/layout_settings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layout_applicationId"
+            style="@style/InputLayout"
+            android:layout_marginBottom="@dimen/dimen_24"
+            android:hint="@string/application_id">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/input_applicationId"
+                style="@style/EditText"
+                android:inputType="number" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layout_userId"
+            style="@style/InputLayout"
+            android:layout_marginBottom="@dimen/dimen_24"
+            android:hint="@string/user_id">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/input_userId"
+                style="@style/EditText"
+                android:inputType="text" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/layout_token"
+            style="@style/InputLayout"
+            android:layout_marginBottom="@dimen/dimen_24"
+            android:hint="@string/security_token">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/input_token"
+                style="@style/EditText"
+                android:inputType="text" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_fetchOffers"
+            style="@style/Button"
+            android:layout_marginBottom="@dimen/dimen_32"
+            android:text="@string/get_all_offers" />
+
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

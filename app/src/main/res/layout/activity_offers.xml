@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/BaseLayout"
+    android:orientation="vertical"
+    tools:context=".ui.view.activities.OffersActivity">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_offers"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="8dp"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/layout_emptyState"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/txt_emptyTxt"
+            style="@style/TextView.Header"
+            android:layout_marginTop="16dp"
+            android:padding="8dp"
+            android:text="@string/there_is_no_offers_yet" />
+
+    </LinearLayout>
+
+</LinearLayout>

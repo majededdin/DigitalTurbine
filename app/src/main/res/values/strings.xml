@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Digital Turbine</string>
+
+    <string name="connection_is_lost">No connection</string>
+    <string name="waiting_for_connection">Waiting for connection</string>
+    <string name="connection_is_back">Back to connection</string>
+    <string name="request_timeout_please_check_your_connection">Request timeout, Please check your connection.</string>
+    <string name="sorry_something_went_wrong_and_being_reported_now">Sorry, Something went Wrong and being reported now.</string>
+
+    <string name="required">Required</string>
+    <string name="retry">Retry</string>
+    <string name="dismiss">Dismiss</string>
+    <string name="application_id">Application ID</string>
+    <string name="user_id">User ID</string>
+    <string name="security_token">Security Token</string>
+    <string name="there_is_no_offers_yet">There is no offers yet!</string>
+    <string name="get_all_offers">Get all offers</string>
+
+</resources>

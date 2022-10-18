@@ -1,0 +1,145 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="Theme.DigitalTurbine" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <!--display snackbar above keyboard  | Hide Keyboard-->
+        <item name="android:windowSoftInputMode">adjustResize|stateHidden</item>
+
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+
+    </style>
+
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+
+    <style name="BaseLayout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+
+    </style>
+
+
+    // ------------------------------------- TextView ----------------------------------------------
+
+    <style name="TextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/colorTextAndroid</item>
+        <item name="android:gravity">center</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:lineSpacingExtra">6dp</item>
+
+    </style>
+
+
+    <style name="TextView.Colored" parent="TextView">
+        <item name="android:textColor">@color/colorTextHeader</item>
+
+    </style>
+
+
+    <style name="TextView.Paragraph" parent="TextView">
+        <item name="android:textStyle">bold</item>
+
+    </style>
+
+
+    <style name="TextView.Header" parent="TextView.Colored">
+        <item name="android:textSize">18sp</item>
+
+    </style>
+
+    <style name="TextView.Clickable" parent="TextView.Paragraph">
+        <item name="android:padding">8dp</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:textColor">?attr/colorAccent</item>
+        <item name="android:background">?attr/selectableItemBackground</item>
+
+    </style>
+
+    // ----------------------------------------- EditText ------------------------------------------
+
+    <style name="InputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/appButtonHeight</item>
+        <item name="android:layout_marginStart">@dimen/dimen_16</item>
+        <item name="android:layout_marginEnd">@dimen/dimen_16</item>
+        <item name="boxCornerRadiusBottomEnd">@dimen/dimen_16</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/dimen_16</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/dimen_16</item>
+        <item name="boxCornerRadiusTopStart">@dimen/dimen_16</item>
+    </style>
+
+    <style name="EditText" parent="Widget.AppCompat.EditText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:paddingTop">11dp</item>
+        <item name="android:paddingBottom">11dp</item>
+        <item name="android:paddingStart">@dimen/dimen_16</item>
+        <item name="android:paddingEnd">@dimen/dimen_16</item>
+        <item name="android:drawablePadding">@dimen/dimen_8</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textAlignment">viewStart</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:textColorHint">@color/colorTextAndroid</item>
+        <item name="android:selectAllOnFocus">true</item>
+    </style>
+
+    // --------------------------------- Buttons -------------------------
+
+    <style name="Button" parent="Widget.MaterialComponents.Button">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/appButtonHeight</item>
+        <item name="android:layout_marginStart">@dimen/appButtonMargins</item>
+        <item name="android:layout_marginEnd">@dimen/appButtonMargins</item>
+        <item name="android:text">@string/app_name</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:gravity">center</item>
+        <item name="cornerRadius">@dimen/dimen_16</item>
+        <item name="android:backgroundTint">@color/colorPrimary</item>
+
+    </style>
+
+    // --------------------------------- ImageView -------------------------
+
+    <style name="ImageView">
+        <!--        <item name="place_holder_icon">@drawable/layer_default_place_holder</item>-->
+        <!--        <item name="default_icon">@drawable/ic_default_user</item>-->
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:adjustViewBounds">true</item>
+
+    </style>
+
+
+    // --------------------------------- CardView -------------------------
+
+    <style name="CardView.Base" parent="Base.CardView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="cardUseCompatPadding">false</item>
+        <item name="cardBackgroundColor">@android:color/white</item>
+        <item name="cardCornerRadius">@dimen/appComponentRadius</item>
+        <item name="cardElevation">1dp</item>
+        <item name="cardPreventCornerOverlap">false</item>
+        <item name="android:layout_marginStart">8dp</item>
+        <item name="android:layout_marginEnd">8dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+
+    </style>
+
+</resources>

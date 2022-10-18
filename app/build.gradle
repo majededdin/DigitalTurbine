@@ -1,0 +1,103 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    signingConfigs {
+        release {
+            storeFile file("$rootDir/keyStore.jks")
+            keyAlias 'key0'
+        }
+        testing {
+            storeFile file("$rootDir/keyStore_testing.jks")
+            storePassword '@digitalturbine'
+            keyPassword '@digitalturbine'
+            keyAlias 'key0'
+        }
+    }
+
+    namespace 'majed.eddin.digitalturbine'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "majed.eddin.digitalturbine"
+        minSdk 21
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        signingConfig signingConfigs.release
+    }
+
+    buildTypes {
+        release {
+            shrinkResources true
+            minifyEnabled true
+            debuggable false
+            signingConfig signingConfigs.release
+            buildConfigField("String", "BASE_URL", "\"http://api.fyber.com/feed/v1/\"")
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            debuggable true
+            signingConfig signingConfigs.debug
+            buildConfigField("String", "BASE_URL", "\"http://api.fyber.com/feed/v1/\"")
+        }
+        Testing {
+            shrinkResources true
+            minifyEnabled true
+            debuggable true
+            signingConfig signingConfigs.testing
+            buildConfigField("String", "BASE_URL", "\"http://api.fyber.com/feed/v1/\"")
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    buildFeatures {
+        viewBinding true
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    testImplementation 'junit:junit:4.13.2'
+    testImplementation "org.mockito:mockito-core:3.3.3"
+    testImplementation 'org.hamcrest:hamcrest-library:1.3'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+
+    // Android
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'androidx.appcompat:appcompat:1.5.1'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
+    implementation 'com.google.android.material:material:1.6.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+
+    // LifeCycle
+    implementation "android.arch.lifecycle:extensions:1.1.1"
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+    testImplementation "android.arch.core:core-testing:1.1.1"
+
+    // Retrofit2
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.5.0'
+
+    // RxJava
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.16'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
+
+    // OkHttpClient For Retrofit
+    implementation 'com.squareup.okhttp:okhttp:2.7.2'
+    implementation "com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.10"
+
+    // Custom Libraries
+    implementation 'com.github.am-Leon:network-connectivity:v1.0.0'         // NetworkConnectivity
+    implementation 'com.github.am-Leon:LeonImageView:v1.1.4'                // LeonImageView
+    implementation 'com.squareup.picasso:picasso:2.71828'                   // Picasso
+
+}
